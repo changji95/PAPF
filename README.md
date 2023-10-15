@@ -48,8 +48,19 @@ python main.py --fd 4 --layers 3 --nodes 120
 ```
 Pretrained models for each fold are provided for testing.
 
+# Results
+The test results on each fold of the Volve dataset are as follows:
+| Metric | Fold 0 | Fold 1 | Fold 2 | Fold 3 | Fold 4 | Average |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------- |
+|   MSE  | 0.334  | 0.360  | 0.103  | 0.165  | 0.247  |  0.242  |
+|   MAE  | 0.441  | 0.438  | 0.191  | 0.229  | 0.347  |  0.329  |
+
+# Acknowledgement
+The dataset used in this paper is downloaded from https://www.equinor.com/energy/volve-data-sharing, an open-source online data repository provided by Equinor. 
+We appreciate it.
+
 # Citation
-Please cite our paper if it's helpful to you in your research.
+Please cite our paper if it's helpful to your research.
 ```
 @article{chang2023physics,
   title={Physics-constrained sequence learning with attention mechanism for multi-horizon production forecasting},
