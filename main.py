@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.utils.data as Data
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 from model import PAPF
 from utils import *
@@ -123,10 +123,8 @@ def evaluate(model, test_loader, plot=False):
 
     mse = mean_squared_error(total_true, total_pred)
     mae = mean_absolute_error(total_true, total_pred)
-    r2 = r2_score(total_true, total_pred)
     print('Test MSE: %.5f' % mse)
     print('Test MAE: %.5f' % mae)
-    print('Test R2 : %.5f' % r2)
 
     if plot:
         plot_profile(total_true.flatten(), total_pred.flatten(), args.fd)
